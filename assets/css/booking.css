@@ -1,0 +1,252 @@
+/*
+Theme Name: Maison Z'elles Theme
+Theme URI: http://example.com/
+Author: Marcel Eloundou
+Author URI: http://example.com/
+Description: A custom theme inspired by the Amelia plugin interface.
+Version: 1.0
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    color: #000000;
+    background-color: #fac20d; /* Couleur de fond globale */
+}
+
+/* Styles pour centrer le logo dans un cercle blanc */
+.site-header {
+    text-align: center;
+    padding: 20px;
+}
+
+.site-logo-container {
+    display: inline-block;
+    background-color: #ffffff; /* Fond blanc */
+    border-radius: 50%; /* Cercle */
+    padding: 20px; /* Espace autour du logo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre pour un effet de profondeur */
+    margin-bottom: 20px; /* Espace entre le logo et le titre */
+}
+
+.site-logo img {
+    display: block;
+    max-width: 150px; /* Ajuster cette valeur pour réduire la taille du logo */
+    height: auto;
+    border-radius: 50%; /* Pour s'assurer que l'image est également dans un cercle */
+}
+
+/* Styles pour le conteneur du titre et de la description */
+.site-title-container {
+    margin-top: 20px;
+}
+
+.site-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.site-description {
+    font-size: 1.25rem;
+    color: #333333;
+    margin: 10px 0 0;
+}
+
+/* Styles pour le conteneur principal de la réservation */
+.booking-container {
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Styles pour la barre latérale */
+.booking-sidebar {
+    width: 30%;
+    background-color: #3ab4ed; /* Couleur de fond de la barre latérale */
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 8px 0 0 8px;
+}
+
+/* Liste des étapes dans la barre latérale */
+.booking-sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Style des items de la liste dans la barre latérale */
+.booking-sidebar ul li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #3ab4ed; /* Couleur des étapes non actives */
+    color: #ffffff;
+    font-weight: normal;
+}
+
+/* Style de l'étape active */
+.booking-sidebar ul li.active {
+    background-color: #ffffff; /* Étape active */
+    color: #3ab4ed; /* Texte de l'étape active */
+    font-weight: bold;
+}
+
+/* Style des cercles pour indiquer l'état des étapes */
+.booking-sidebar ul li .step-circle {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid #fac20d; /* Couleur principale */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.step-circle.checked {
+    background-color: #fac20d; /* Couleur des étapes cochées */
+    color: #ffffff;
+}
+
+.step-circle.active {
+    border-color: #fac20d; /* Couleur de l'étape actuelle */
+    background-color: #fac20d;
+    color: #ffffff;
+}
+
+.step-circle.future {
+    border-color: #fac20d;
+    color: #fac20d;
+    background-color: transparent;
+}
+
+/* Style du contenu principal de la réservation */
+.booking-content {
+    width: 75%;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 0 8px 8px 0;
+}
+
+/* Style pour la description du service */
+.service-description {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-style: italic;
+    color: #666666;
+}
+
+/* Style des boutons "Continuer" */
+.continue-btn {
+    background-color: #3ab4ed; /* Couleur du bouton */
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Changement de couleur au survol des boutons */
+.continue-btn:hover {
+    background-color: #fac20d; /* Changement de couleur au survol */
+}
+
+/* Style spécifique pour le calendrier */
+.calendar {
+    margin-top: 20px;
+}
+
+/* Ajout de styles pour le tableau de gestion des disponibilités dans le back-end */
+table.widefat {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table.widefat th, table.widefat td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table.widefat th {
+    background-color: #f1f1f1;
+    font-weight: bold;
+}
+
+/* Actions de suppression ou modification dans la gestion des disponibilités */
+form[style="display:inline;"] input[type="submit"] {
+    background-color: #dc3232;
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+form[style="display:inline;"] input[type="submit"]:hover {
+    background-color: #a80000;
+}
+
+.wrap h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="text"], input[type="time"], input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+button, .button-primary {
+    background-color: #0073aa;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover, .button-primary:hover {
+    background-color: #005a87;
+}
+.repeat-hours div {
+    margin-bottom: 10px;
+}
+
+.add-hour-btn {
+    background-color: #0073aa;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.add-hour-btn:hover {
+    background-color: #005a87;
+}
